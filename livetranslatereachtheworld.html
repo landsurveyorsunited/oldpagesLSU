@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en"><head><title>Live Translator Tool for Reach the World</title>
+
+<meta content="Land Surveyors United" name="author" />
+<meta content="Translate Live between languages when communicating with other Reach the World from other countries using this tool." name="description" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<style>
+body {
+margin: 0px;
+padding: 20px 0px;
+background-color: #f1f1f1;
+text-align: center;
+font-family: Arial;
+color: #777777;
+background-image: url(https://dl.dropbox.com/u/49702/images/shelf/pbbg.jpg);
+}
+h1 {color:#fff;text-shadow: 2px 1px 3px #0c709e;
+filter: dropshadow(color=#0c709e, offx=2, offy=1);
+}
+.main {
+border: 1px solid #cccccc;
+margin: 10px auto;
+padding: 5px;
+width: 850px;
+height: 400px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+-moz-border-radius-bottomleft: 20px;
+background-color: #ffffff;
+}
+p.small {
+margin: 0px;
+padding: 0px;
+font-size: 11px;
+}
+.bottom {
+border: 1px solid #cccccc;
+margin: 10px auto;
+padding: 10px;
+width: 890px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+background-color: #ddffee;
+text-align: left;
+font-size: 12px;
+}
+.column {
+margin: 0px 2px 0px 0px;
+float: left;
+width: 256px;
+padding-top: 30px;
+}
+.column_t1 {
+margin: 0px 2px 0px 0px;
+background: transparent url(https://dl.dropbox.com/u/49702/images/childtwo.png) no-repeat scroll center;
+height: 290px;
+float: left;
+width: 160px;
+}
+.column_t2 {
+margin: 0px 2px 0px 0px;
+background: transparent url(https://dl.dropbox.com/u/49702/images/childone.png) no-repeat scroll center;
+height: 290px;
+float: left;
+width: 140px;
+}
+.column_all {
+margin: 0 auto;
+width: 830px;
+}
+.area_input {
+border: 1px solid #c1c1c1;
+margin: 0px 0px 5px;
+padding: 20px;
+height: 16px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+-moz-border-radius-bottomleft: 20px;
+background-color: #ddffee;
+width: 450px;
+}
+.area_output {
+border: 1px solid #c1c1c1;
+margin: 0px 20px 5px;
+padding: 20px;
+height: 110px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+-moz-border-radius-bottomleft: 20px;
+background-color: #ffffcc;
+font-family: 'Courier New',Courier,monospace;
+font-size: 13px;
+font-weight: bold;
+text-align: left;
+}
+div.gBranding {
+background-color: #f1f1f1;
+height: 30px;
+margin-top: 20px;
+position: relative;
+width: 100px;
+}
+.button {
+border-top: 1px solid #96d1f8;
+padding: 13.5px 27px;
+background: #65a9d7 none repeat scroll 0% 50%;
+-moz-border-radius-topleft: 8px;
+-moz-border-radius-topright: 8px;
+-moz-border-radius-bottomright: 8px;
+-moz-border-radius-bottomleft: 8px;
+color: white;
+font-size: 15px;
+font-family: Helvetica,Arial,Sans-Serif;
+text-decoration: none;
+vertical-align: middle;
+}
+.button:hover {
+background: #28597a none repeat scroll 0% 50%;
+border-top-color: #28597a;
+color: #cccccc;
+}
+.button:active {
+background: #1b435e none repeat scroll 0% 50%;
+border-top-color: #1b435e;
+}
+</style>
+<script src="http://jquery-translate.googlecode.com/files/jquery.translate-1.3.7.min.js"></script>
+<script src="http://plugins.jquery.com/files/jquery.cookie.js.txt"></script>
+</head>
+<body>
+<div style="background-repeat: no-repeat; float: left; position: absolute; height: 250px; background-image: url(https://dl.dropbox.com/u/49702/images/Logo_NEW.png); width: 236px;"><br />
+</div>
+<div style="float: left; background-image: url(https://dl.dropbox.com/u/49702/images/Logo_NEW.png); background-repeat: no-repeat; position: absolute; z-index: 1; overflow: visible;"></div>
+<div><a style="color: white;" href="http://www.reachtheworld.org/">Home</a> | <a style="color: white;" href="http://www.reachtheworld.org/resources/general_form">Get
+Involved</a> | <a style="color: white;" href="http://www.reachtheworld.org/about/events">Events</a>
+| <a style="color: white;" href="http://www.reachtheworld.org/about/mission">About Us</a></div>
+<div><iframe src="http://www.facebook.com/plugins/like.php?app_id=128251870529796&amp;href=http%3A%2F%2Ffacebook.com%2Freachtheworld.org&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" style="border: medium none ; overflow: hidden; width: 450px; height: 80px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+<h1>Live Translator for Reach the World</h1>
+<div id="main" class="main">
+<div class="column_t1"> From:
+<select id="_from"><option value="en" selected="selected">English</option><option value="es">Spanish</option><option value="fr">French</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="pt">Portuguese</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="de">German</option><option value="hi">Hindi</option><option value="sv">Swedish</option><option value="cs">Czech</option><option value="ms">Malaysian</option><option value="pt-br">Portuguese (Brazil)</option><option value="ar-eg">Arabic (Egypt)</option><option value="id">Indonesian</option><option value="pl">Polish</option></select>
+</div>
+<div class="column">
+<h3>Entered text</h3>
+<div id="translation_original" class="area_output"></div>
+</div>
+<div class="column">
+<h3>Translation</h3>
+<div id="translation" class="area_output"></div>
+</div>
+<div class="column_t2"> To:
+<select id="_to"><option value="en">English</option><option value="es" selected="selected">Spanish</option><option value="fr">French</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="pt">Portuguese</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="de">German</option><option value="hi">Hindi</option><option value="sv">Swedish</option><option value="cs">Czech</option><option value="ms">Malaysian</option><option value="pt-br">Portuguese (Brazil)</option><option value="ar-eg">Arabic (Egypt)</option><option value="id">Indonesian</option><option value="pl">Polish</option></select>
+</div>
+<div class="column_all">
+<p style="color: red; font-weight: bold;" class="small"><big>Type
+your text here</big></p>
+<textarea id="content" name="content" class="area_input"></textarea> </div>
+</div>
+<div class="bottom">
+<p style="color: red;"><b>Welcome to the Live
+Translator for Reach the World</b></p>
+<p>Select the language that you will be typing in and then select
+into which language you want to translate the text. After you typed
+something hit enter and you will see the translation instantly.</p>
+<table style="width: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td><a href="https://www.facebook.com/reachtheworld.org" class="button">Únase a nuestra red</a></td>
+<td><a href="https://www.facebook.com/reachtheworld.org" class="button">Entrar em nossa rede</a></td>
+<td><a href="https://www.facebook.com/reachtheworld.org" class="button">हमारे नेटवर्क में शामिल हों</a></td>
+<td><a href="https://www.facebook.com/reachtheworld.org" class="button">Bizim Ağ Katılın</a></td>
+<td><a href="https://www.facebook.com/reachtheworld.org" class="button">انضم لشبكتنا</a></td>
+</tr>
+</tbody>
+</table>
+<br />
+<div>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="http://files.landsurveyorsunited.com/livetranslatereachtheworld.html" num_posts="5" width="500" colorscheme="dark"></fb:comments></div>
+<p style="text-align: center;"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">
+<h2 style="font-size: 1.5em;"></h2>
+</span></p>
+</div>
+<script type="text/javascript" src="https://dl.dropbox.com/u/49702/bootstrap/js/jquery.translate-1.4.7-debug-all.js"></script><script>document.getElementById("hello").innerHTML = "Hello World - this was inserted using JavaScript";
+jQuery(function($){ //when DOM is ready
+$('body').css('height','800px');
+$.translate(function(){ //when the Google Language API is loaded
+function translateTo( destLang ){ //this can be declared in the global scope too if you need it somewhere else
+$('body').translate( 'english', destLang, { //translate from english to the selected language
+not: '.jq-translate-ui', //by default the generated element has this className
+fromOriginal:true //always translate from english (even after the page has been translated)
+//unnecessary in v1.4, the default value is true
+});
+}
+//you can generate other controls as well, not just a dropdown:
+//there are new features in v1.4: http://code.google.com/p/jquery-translate/wiki/Extensions
+$.translate.ui('ul', 'li', 'span') .appendTo('body') //insert the element to the page
+.css({'color':'blue', 'background-color':'white'})
+.find('span')
+.css('cursor','pointer')
+.click(function(){ //when selecting another language
+//in v1.4 $(this).val() or $(this).attr("value") // is always the exact language code!
+translateTo( $(this).text() );
+$.cookie('destLang', $(this).text() ); // set a cookie to remember the selected language
+// see: http://plugins.jquery.com/project/Cookie
+return false; //prevent default browser action
+})
+var destLang = $.cookie('destLang'); //get previously translated language
+if( destLang ) //if it was set then
+translateTo( destLang );
+}); //end of Google Language API loaded
+}) //end of DOM ready
+</script>
+
+<script type="text/javascript">
+$().ready(function() {
+google.language.getBranding('branding');
+$('#main').translate();
+});
+</script>
+</body></html>

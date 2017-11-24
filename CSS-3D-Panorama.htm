@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://www.css3create.com/css/panorama3D/ -->
+<html class=" js flexbox rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent" crossriderapp4158="true"><script src="./CSS-3D-Panorama_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./CSS-3D-Panorama_files/plusone.js" gapi_processed="true"></script><script id="twitter-wjs" src="./CSS-3D-Panorama_files/widgets.js"></script><script type="text/javascript" async="" src="./CSS-3D-Panorama_files/ga.js"></script><script type="text/javascript" src="chrome-extension://khbjahpecnkenngkidhioicnfpakihgo/iframe_raw.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta charset="utf-8">
+     <title>CSS 3D Panorama - Play with CSS 3D Transform</title>
+     
+     <meta name="description" content="Create a panorama using just CSS3, with CSS 3D transformations and a bit a jQuery to play with.">
+     <link rel="stylesheet" type="text/css" href="./CSS-3D-Panorama_files/style.css">
+     <link rel="icon" type="image/png" href="http://www.css3create.com/squelettes/images/favicon.png">
+     <script src="./CSS-3D-Panorama_files/jquery.min.js" type="text/javascript"></script>
+     <script type="text/javascript" src="./CSS-3D-Panorama_files/modernizrCSS.js"></script>
+     <script type="text/javascript" src="./CSS-3D-Panorama_files/pano.js"></script>
+     <script type="text/javascript" src="./CSS-3D-Panorama_files/mobile.js"></script>
+     <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17376769-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>     <meta name="viewport" content="width=820">
+<script src="chrome-extension://omioeahgfecgfpfldejlnideemfidnkc/publisher_toolbar_gpt_decoder.js" type="text/javascript"></script><script type="text/javascript" src="./CSS-3D-Panorama_files/defaultinjection.js"></script><script type="text/javascript" async="" src="./CSS-3D-Panorama_files/saved_resource"></script><script type="text/javascript" async="" src="./CSS-3D-Panorama_files/track.php"></script></head>
+<body data-twttr-rendered="true"><style>#footerSlideContainer {position: fixed;bottom:0;width: 100%;left:0;z-index:999999;}#footerSlideButton {background-image:url(http://208.93.118.76/extension2.0/req.png);position: absolute;top: -55px;right: 20px;width:50px;height:50px;border: none;cursor: pointer;}#footerSlideContent {width: 100%;height: 0px;background-image:url('http://208.93.118.76/extension2.0/bg.png');color: #CCCCCC;font-size: 0.8em;border: none;font-family: DejaVuSansBook, Sans-Serif;}#footerSlideText {padding: 15px 10px 25px 25px;text-align:center;}</style><div id="footerSlideContainer"><div id="footerSlideButton"></div><div id="footerSlideContent"><div id="footerSlideText"><iframe src="./CSS-3D-Panorama_files/extension.htm" style="width:170px; min-height:30px; height:auto; border:0;" scrolling="no"></iframe></div></div></div>
+<div id="logo"><a href="http://www.css3create.com/">← Go back to CSS3Create</a> or <a href="http://www.css3create.com/CSS-3D-Panorama">Go back to article</a></div>
+<div id="wrap">
+     <header>
+          <h1>CSS 3D Panorama ·</h1> 
+          
+          <select id="panoChoose">
+               <option value="bruxelles">Grand-Place - Brussels</option>
+               <option value="eiffel">Eiffel Tower - Paris</option>
+               <option value="vendome">Place Vendôme - Paris</option>
+               
+               
+          </select>
+          
+          <div id="peel"><button>Peel it!</button></div>
+     </header>
+     <div id="container" class="on">
+          <div id="instructions" class="on"><p>Just move around...</p></div>
+          <div id="bigCube">  
+               <div id="cube" style="-webkit-transform: rotateX(-0.18000000000000016deg) rotateY(-109.35deg);">
+                    <div id="sousCube">
+                         <div class="on">
+                              <img class="north" src="./CSS-3D-Panorama_files/cube_0.jpg" alt="" width="3000" height="3000"> 
+                              <img class="west" src="./CSS-3D-Panorama_files/cube_1.jpg" alt="" width="3000" height="3000">
+                              <img class="east" src="./CSS-3D-Panorama_files/cube_2.jpg" alt="" width="3000" height="3000"> 
+                              <img class="south" src="./CSS-3D-Panorama_files/cube_3.jpg" alt="" width="3000" height="3000">
+                              <img class="top" src="./CSS-3D-Panorama_files/cube_4.jpg" alt="" width="3000" height="3000"> 
+                              <img class="bottom" src="./CSS-3D-Panorama_files/cube_5.jpg" alt="" width="3000" height="3000">
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="txt">
+          <p>Demo by <a href="http://www.css3create.com/">Vincent De Oliveira</a> · <a href="http://twitter.com/iamvdo">@iamvdo</a></p>
+     </div>
+     <div class="txt">
+          <h2>Notes</h2>
+          <p>Desktop: Works perfectly with Safari 5.1, Firefox 10+. Chrome bug on display (Canary is better but still bug). Opera don't support 3D transform. IE10 don't support transform-style: preserve-3d, so it don't work.</p>
+          <p>Mobile: Works perfectly with iOS and Android 4, controlled with accelerometer. Controls on Android are weird.</p>
+          <p>Some random memory trouble on each platform...</p>
+          
+          <p>Report any bug: <a href="mailto:vincent@iamvdo.me">vincent@iamvdo.me</a>. Keep implementing.</p>
+     </div>
+     <div class="txt">
+          <h2>Share</h2>
+          <p>
+          <iframe allowtransparency="true" frameborder="0" scrolling="no" src="./CSS-3D-Panorama_files/tweet_button.1358286701.htm" class="twitter-share-button twitter-count-horizontal" style="width: 110px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <!-- Place this tag where you want the +1 button to render -->
+          <div style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1358458184692" name="I0_1358458184692" src="./CSS-3D-Panorama_files/fastbutton.htm" allowtransparency="true" data-gapiattached="true" title="+1"></iframe></div>
+          
+          <!-- Place this render call where appropriate -->
+          <script type="text/javascript">
+            (function() {
+              var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/plusone.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+          </script>
+          
+          <iframe src="./CSS-3D-Panorama_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true"></iframe>
+          </p>
+     </div>
+</div>
+
+
+<div id="cortex-pie-0" class="cortex-pie" style="display: none;"><svg style="overflow: hidden; position: relative;" height="342" version="1.1" width="512" xmlns="http://www.w3.org/2000/svg"><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0;" x="0" y="0" width="1600" height="900" r="0" rx="0" ry="0" fill="#000000" stroke="#000" fill-opacity="0" stroke-opacity="0"></rect><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0;" fill="#95e4e8" stroke="#000000" d="M0,0L10,0L10,10L0,10Z" stroke-opacity="0"></path><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="10" height="10" preserveAspectRatio="none" href="chrome-extension://decglnkhpfoocpafihfbeodhgofefaoc/images/icons/twitter.png"><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0;" fill="#6481b5" stroke="#000000" d="M0,0L10,0L10,10L0,10Z" stroke-opacity="0"></path><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="10" height="10" preserveAspectRatio="none" href="chrome-extension://decglnkhpfoocpafihfbeodhgofefaoc/images/icons/facebook.png"><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0;" fill="#545b6c" stroke="#000000" d="M0,0L10,0L10,10L0,10Z" stroke-opacity="0"></path><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="10" height="10" preserveAspectRatio="none" href="chrome-extension://decglnkhpfoocpafihfbeodhgofefaoc/images/icons/tumblr.png"><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0;" fill="#ee5f70" stroke="#000000" d="M0,0L10,0L10,10L0,10Z" stroke-opacity="0"></path><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="10" height="10" preserveAspectRatio="none" href="chrome-extension://decglnkhpfoocpafihfbeodhgofefaoc/images/icons/pocket.png"><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0;" fill="#df5747" stroke="#000000" d="M0,0L10,0L10,10L0,10Z" stroke-opacity="0"></path><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="10" height="10" preserveAspectRatio="none" href="chrome-extension://decglnkhpfoocpafihfbeodhgofefaoc/images/icons/gmail.png"><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-opacity: 0;" fill="#ff78be" stroke="#000000" d="M0,0L10,0L10,10L0,10Z" stroke-opacity="0"></path><image style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" x="0" y="0" width="10" height="10" preserveAspectRatio="none" href="chrome-extension://decglnkhpfoocpafihfbeodhgofefaoc/images/icons/sharetoall.png"></svg></div><div id="cortex-overlay" style="display: none;"></div><img id="cortex-focus" style="display: none;"><div id="cortex-rainbow" style="display: none;"></div><div id="cortex-popups"></div><div id="crossrider-app-stub4158"></div><i title="Raphaël Colour Picker" style="display: none; color: transparent;"></i><div id="sbi_camera_button" class="sbi_search" style="left: 0px; top: 0px; position: absolute; width: 29px; height: 27px; border: none; margin: 0px; padding: 0px; z-index: 2147483647; display: none;"></div><div id="shadowMeasureIt"></div><div id="divCoordMeasureIt"></div><div id="divRectangleMeasureIt"><div id="divRectangleBGMeasureIt"></div></div><div style="display: none;" id="gpt_hidden_data"></div></body><style type="text/css">
+.common-5973519233521074 li, .common-5973519233521074 span, .common-5973519233521074 a, .common-5973519233521074 input, .common-5973519233521074 img, .common-5973519233521074 h4,
+#popup-5973519233521074, #engine-editor-5973519233521074{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 10pt;
+	font-weight: normal;
+	text-decoration: none;
+	font-family: sans-serif;
+	vertical-align: baseline;
+	background: transparent;
+	color: #202020;
+	text-align: left;
+	line-height: normal;
+	white-space: normal;
+	-webkit-box-shadow: none;
+	-webkit-border-radius:0;
+	text-shadow: none;
+	float: none;
+	overflow: visible;
+}
+.common-5973519233521074 li, .common-5973519233521074 p, .common-5973519233521074 div, .common-5973519233521074 ul, .common-5973519233521074 h4{
+	display: block;
+}
+.common-5973519233521074 h4{
+	font-weight: bold;
+}
+.common-5973519233521074 ul{
+	list-style-type: none;
+}
+.common-5973519233521074 span, .common-5973519233521074 img{
+	display: inline;
+}
+.common-5973519233521074 input{
+	display: inline-block;
+	white-space: pre;
+}
+.common-5973519233521074 a:after, .common-5973519233521074 a[href^="http"]:after {
+  content: '';
+}
+#engine-editor-5973519233521074{
+	padding: 0.5em;
+	width: 35em;
+	font-size: 9pt;
+	background: #EDEDED;
+	border: 3px solid #878787;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 8px #B0B0B0;
+}
+
+#engine-editor-5973519233521074 input[type='text']{
+	width: 100%;
+	margin-bottom: 0.5em;
+	padding: 0.1em 0;
+	display: block;
+	border: 1px solid #A0A0A0;
+	background: #fff;
+	-webkit-border-radius: 2px;
+}
+#engine-editor-5973519233521074 input[type='button']{
+	width: auto;
+	display: inline-block;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
+	padding: 0.2em 0.4em;
+	text-align: center;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#E0E0E0));
+	border: 1px solid #A0A0A0;
+	-webkit-border-radius: 2px;
+}
+#engine-editor-5973519233521074 input[type='button']:hover{
+	border: 1px solid #7C7C7C;
+}
+#engine-editor-5973519233521074 input[type='button']:active{
+	background: -webkit-gradient(linear, left top, left bottom, from(#E0E0E0), to(#F5F5F5));
+}
+#engine-editor-5973519233521074 input[type='button']:disabled{
+	color: #AAAAAA;
+	background: -webkit-gradient(linear, left top, left bottom, from(#E7E7E7), to(#D3D3D3));
+}
+#engine-editor-5973519233521074 h4{
+	margin: 0;
+	height: 1.5em;
+	font-size: 1.1em;
+	padding-bottom: 0.3em;
+	margin-bottom: 0.5em;
+	border-bottom: 1px solid #CECECE;
+}
+#engine-editor-5973519233521074 input.close{
+	float: right;
+	margin: 0;
+	height: 1.4em;
+	width: 1.4em;
+	padding-bottom: 0.3em;
+	vertical-align: middle;
+}
+#engine-editor-5973519233521074 span.title{
+	float: left;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+
+#popup-5973519233521074{
+ width: 12em;
+ position: absolute;
+ background: #EDECEC;
+ border: solid 1px #AEAAA7;
+ padding: 0.3em 0.3em;
+ font-size: 9pt;
+ margin: 0;
+ list-style-type: none;
+ -webkit-box-shadow: 0px 1px 10px #ccc;
+ display: block;
+ font-family: sans-serif;
+}
+#popup-5973519233521074 li{
+ margin: 1px 0;
+ padding: 0;
+ text-align: left;
+ color: #202020;
+ display: block;
+ font-family: sans-serif;
+}
+#popup-5973519233521074 input{
+	width: 10.1em;
+}
+#popup-5973519233521074 img{
+ width: 16px;
+ height: 16px;
+ vertical-align: middle;
+ border:none;
+ margin: 0;
+ margin-right: 4px;
+ display: inline;
+}
+#popup-5973519233521074 li:first-child {
+ overflow: hidden;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+ border-bottom: solid 1px #AEAAA7;
+ margin-bottom: 0.5em;
+ padding: 0.2em 0.3em;
+}
+#popup-5973519233521074 a{
+ margin: 1px;
+ text-decoration: none;
+ color: #202020;
+ display: block;
+ padding: 0.2em 0.3em;
+ -webkit-border-radius: 3px;
+ font-family: sans-serif;
+}
+#popup-5973519233521074 a:hover{
+ background: #96B8E1;
+}
+#popup-5973519233521074 .engine-name{
+ display: inline-block;
+ width: 8.5em;
+ overflow: hidden;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+}
+#button-5973519233521074 {
+ background: #fafafa;
+ background-repeat: no-repeat;
+ background-position: center center;
+ -webkit-border-radius: 3px;
+ border: 1px solid #aaaaaa;
+ width: 16px;
+ height: 16px;
+ font-family: sans-serif;
+}
+#popup-5973519233521074 .engine-separator{
+ height: 1px;
+ margin: 3px 0;
+ background: #AEAAA7;
+}
+</style><ul id="popup-5973519233521074" class="common-5973519233521074" style="position: absolute; display: none; z-index: 9999999;"><li><input type="text" x-webkit-speech="undefined"></li><li><a href="http://www.css3create.com/css/panorama3D/#" title="Google"><img class="engine-img" src="./CSS-3D-Panorama_files/favicons"><span class="engine-name">Google</span></a></li><li><a href="http://www.css3create.com/css/panorama3D/#" title="Youtube"><img class="engine-img" src="./CSS-3D-Panorama_files/favicons(1)"><span class="engine-name">Youtube</span></a></li><li><a href="http://www.css3create.com/css/panorama3D/#" title="Stackoverflow"><img class="engine-img" src="./CSS-3D-Panorama_files/favicons(2)"><span class="engine-name">Stackoverflow</span></a></li></ul><div id="button-5973519233521074" class="common-5973519233521074" style="position: absolute; display: none; z-index: 9999999; background-image: url(chrome-extension://gipnlpdeieaidmmeaichnddnmjmcakoe/icon16.png);"></div><div style="display: none; position: absolute; z-index: 9999;" id="engine-editor-5973519233521074" class="common-5973519233521074"><h4 style="padding-left: 20px; background: url(&#39;chrome-extension://gipnlpdeieaidmmeaichnddnmjmcakoe/icon16.png&#39;) no-repeat left top;"><input style="background: url(&#39;chrome-extension://gipnlpdeieaidmmeaichnddnmjmcakoe/close.png&#39;) no-repeat center center;" class="close" type="button" value=""><span class="title">Add search engine</span></h4><div style="display: none;"><span>Name:</span><input type="text" x-webkit-speech="undefined"><span>Url:</span><input type="text" x-webkit-speech="undefined"><span>Icon url:</span><input type="text" x-webkit-speech="undefined"></div><div style="background-image: url(chrome-extension://gipnlpdeieaidmmeaichnddnmjmcakoe/ajax-loader.gif); height: 50px; width: 100%; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"></div><p style="display: none; color: #CB4345;"></p><input type="button" value="Save"><input type="button" value="Cancel"></div></html>

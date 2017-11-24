@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><script></script>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Map Test</title>
+
+<style>
+body,
+html{
+height: 100%;
+width: 100%; } /* If you don't do this, gremlins will eat your nose. */
+#gmap{
+height: 100%;
+left: 0;
+position: fixed !important; /* Acts in pretty much the same way as background-attachment: fixed for an image background. Has to be !important only if you're using the Google Maps API. */
+top: 0;
+width: 100%;
+z-index: 1; } /* Has to be at least one increment smaller in value than the container's z-index */
+#container{
+background: rgba(0, 0, 0, 0.8);
+border-radius: 20px;
+border: 3px solid #fff;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+margin: 0 auto;
+overflow: visible !important; /* Has to be !important only if you're using an on/off switch */
+padding: 40px;
+position: relative;
+top: 100px;
+width: 800px;
+z-index: 2; } /* Has to be at least one increment larger in value than the Google Maps iframe z-index */
+</style>
+</head><body>
+<!-- The regular embed code that Google Maps spews out, sans the line break and small tag; also, added "gmap" id as hook --><iframe id="gmap" src="https://maps.google.com/maps/ms?msa=0&amp;msid=216029752787869705146.0004c8d2b9c5e6bbb674e&amp;hl=en&amp;ie=UTF8&amp;ll=7.87317,26.42235&amp;spn=91.32034,297.7139&amp;t=h&amp;output=embed"></iframe><br>
+<small>View <a href="https://maps.google.com/maps/ms?msa=0&amp;msid=216029752787869705146.0004c8d2b9c5e6bbb674e&amp;hl=en&amp;ie=UTF8&amp;ll=7.87317,26.42235&amp;spn=91.32034,297.7139&amp;t=h&amp;source=embed" style="color: rgb(0, 0, 255); text-align: left;">Land
+Surveyors United Global (Sept 2012)</a> in a larger map</small>
+<div id="container"><title>Mobile Rover | Land Surveyors United</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- The jquery.pageslide.css stylesheet has the class that you'll need on your page -->
+<link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/u/49702/css/jquery.pageslide.css">
+<style>
+body { background: #f4f4f4;
+font: 14px/18px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #666; -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+-webkit-text-size-adjust: none;
+}
+a, a:visited { color: #C30; text-decoration: none; border-bottom: 1px dotted #C30; }
+a:hover { color: #900; border-bottom-style: solid; }
+p { margin-bottom: 20px; }
+#content {
+width: 940px;
+padding: 10px;
+margin: 0 auto;
+}
+#content h1 { color: #333; line-height: 1em; }
+ul#nav { padding-left: 0; list-style: none; width: 100%; margin-bottom: 40px; }
+ul#nav:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+#content ul#nav li { float: left; width: 20%; text-align: center; }
+#content ul#nav a { display: block; background: #000;
+color: #FFF; font-weight: bold; padding: 10px; border-right: 1px solid #FFF;
+}
+#content ul#nav a:hover { background: #333; }
+.open {
+display: none;
+float: left;
+width: 40px;
+height: 30px;
+margin-right: 10px;
+background: url(menu.png) center center no-repeat #333;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+-border-radius: 8px;
+box-shadow: inset 0 0 3px #000;
+text-indent: -999999px;
+border: 0;
+}
+/* Media Queries
+* * Note: Please don't base your responsive design off of this code. It is just here for demo purposes.
+* Rather, grab yourself a copy of Ethan's book: http://www.abookapart.com/products/responsive-web-design
+================================================== */
+/* Mobile and iPad Portrait */
+@media only screen and (max-width: 959px) {
+#content { width: 748px; }
+}
+/* Mobile Landscape and Portrait */
+@media only screen and (max-width: 767px) {
+#content { width: 400px; }
+#content h1 { font-size: 22px; line-height: 30px; background-color: #000; color: #FFF; padding: 10px; }
+#content ul#nav { display: none; }
+.open { display: block; }
+#pageslide { width: 200px; }
+#pageslide #nav li { padding: 10px 0; border-bottom: 1px solid #666; }
+#pageslide #nav li a { color: #FFF; border: none; }
+#pageslide #nav li a:hover { text-decoration: underline; }
+}
+/* Mobile Portrait */
+@media only screen and (max-width: 479px) {
+#content { width: 280px; }
+#content h1 { font-size: 14px; }
+}
+</style>
+<div id="content">
+<h1><a class="open" href="#nav">Menu</a>Land
+Surveyors United
+Mobile Rover</h1>
+<ul id="nav">
+<li><a href="/m?id=544331:MobilePage:97892">What
+You Missed</a></li>
+<li><a href="/m?id=544331:MobilePage:98006">Geo
+Forum</a></li>
+<li><a href="/m?id=544331:MobilePage:106585">Geo
+Groups</a></li>
+<li><a href="/m?id=544331:MobilePage:99832">Members</a></li>
+<li><a href="/m?id=544331:MobilePage:98031">Member
+Map</a></li>
+<li><a href="/m?id=544331:MobilePage:97907">Stories</a></li>
+<li><a href="/m?id=544331:MobilePage:98061">Geo
+Photos</a></li>
+<li><a href="/m?id=544331:MobilePage:107514">Geo
+Videos</a></li>
+<li><a href="/m?id=544331:MobilePage:106584">GeoEvents</a></li>
+<li><a href="/m?id=544331:MobilePage:118896">Speech
+PPT</a></li>
+<li><a href="/m?id=544331:MobilePage:105874">Network
+Notes</a></li>
+</ul>
+<div class="copy">
+<p>Welcome to Land Surveyors United <a href="http://landsurveyorsunited.com/m">mobile
+version</a>, where you can stay connected to all of the
+happenings on the network from
+anywhere, on any device</p>
+<p>Update your status and post to all of your social profiles at
+the same time. Keep your
+friends and associates on LSU up to date by telling us where you are
+working and the type
+of surveying you are doing today. Stay connected and make some friends
+around the globe.</p>
+</div>
+</div>
+<script src="https://dl.dropbox.com/u/49702/js/jquery-1.7.1.min.js"></script>
+<script src="https://dl.dropbox.com/u/49702/js/jquery.pageslide.min.js"></script>
+<script>
+$(".open").pageslide();
+</script></div>
+</body></html>

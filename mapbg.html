@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head>
+	
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+		<meta property="og:description" content="Dewey Beach is about to get crazy come Memorial Day Weekend 2011. Are you going?" />
+		<meta property="og:title" content="Dewey Beach Memorial Day Countdown" />
+		<meta property="og:image" content="http://wadehammes.com/dewey-beach/map-thumb.JPG" />
+		
+		<link href="http://www.wadehammes.com/dewey-beach/main.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />	
+			
+		<script language="Javascript" type="text/javascript" src="https://dl.dropbox.com/u/49702/js/jQuery.js"></script> 
+		<script language="Javascript" type="text/javascript" src="https://dl.dropbox.com/u/49702/js/countdown.js"></script> 	
+		<script language="javascript" type="text/javascript"> 
+		jQuery(document).ready(function() {
+			$('#countdown_dashboard').countDown({
+				targetDate: {
+					'day': 		21,
+					'month': 	6,
+					'year': 	2014,
+					'hour': 	12,
+					'min': 		0,
+					'sec': 		0					
+					},
+					omitWeeks: true
+			});
+		});
+		</script> 
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAOfgpAUa7iml68v1cKgWOnRSBX20pt0ZeXCc4eaufvYgMOHufdBS6sFkSJ1BM1yzzRNOdwaMfiBqRZw" type="text/javascript"></script>
+		<script language="Javascript" type="text/javascript" src="https://dl.dropbox.com/u/49702/js/map.js"></script>
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+		
+		<style type="text/css" media="screen">
+        iframe { vertical-align: top; }
+		</style>
+		
+	</head>
+	
+	<body onload="initialize()" onunload="GUnload()">
+		<!-- Countdown dashboard start --> 
+		<div id="countdown_dashboard"> 
+
+			<div class="dash days_dash"> 
+				<span class="dash_title">days</span> 
+				<div class="digit"></div> 
+				<div class="digit"></div> 
+			</div> 
+ 
+			<div class="dash hours_dash"> 
+				<span class="dash_title">hours</span> 
+				<div class="digit"></div> 
+				<div class="digit"></div> 
+			</div> 
+ 
+			<div class="dash minutes_dash"> 
+				<span class="dash_title">minutes</span> 
+				<div class="digit"></div> 
+				<div class="digit"></div> 
+			</div> 
+ 
+			<div class="dash seconds_dash"> 
+				<span class="dash_title">seconds</span> 
+				<div class="digit"></div> 
+				<div class="digit"></div> 
+			</div> 
+ 
+		</div>
+		<div id="font">
+			until Survey Earth in a Day 3D.<br />
+			<div class="text"><span class="little">At noon on the day of the Solstice (June 21 2014) we will be simultaneously taking GPS readings in every part of the globe and measuring the entire surface of the earth, as a community for the second time!</span></div>
+			<div class="text"><a href="http://twitter.com/share" class="twitter-share-button" data-text="I will be helping with Survey Earth in a Day 2.0. Are you going to be there? Let's count down the madness!" data-count="horizontal" data-via="whammes">Tweet</a><fb:like href="http://wadehammes.com/dewey-beach" layout="button_count" show_faces="false" width="90"></fb:like></div>
+			<div style="clear:both;"></div>
+			<div class="text"><span class="little" style="font-size: 8pt;">created by <a href="http://twitter.com/surveyearth" alt="">Survey Earth in a Day</a></span></div>
+		</div>
+		<div id="map_canvas" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 0;"></div>
+		
+	</body>
+	<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-10143312-5']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+	</script>
+</html>

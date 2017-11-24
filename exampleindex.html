@@ -1,0 +1,528 @@
+
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico">
+<title>Example index</title>
+
+<style type="text/css">
+
+BODY
+{
+font-family: Arial;
+font-size: 10pt;
+background-color: #CCCCFF;
+margin: 0px;
+}
+
+
+h6 { font-size: 10pt }
+h5 { font-size: 11pt }
+h4 { font-size: 16pt ;color: red;}
+h3 { font-size: 16pt ;color: green;}
+h2 { font-size: 16pt ;color: blue;}
+h1 { font-size: 16pt ;color: yellow;}
+
+
+table {
+font-family: Arial;
+font-size: 10pt; 
+text-align:left; 
+background-color:white; 
+padding:10px;
+}
+
+td {vertical-align:top; 
+padding:10px;
+}
+
+A:hover {
+color:red;
+text-decoration:underline overline;
+}
+
+code{
+font-size: 12px;
+}
+
+.column1{
+}
+
+.column2{
+}
+
+.new {
+color: red;
+font-size: 80%;
+vertical-align: top;
+}
+
+#map {
+width:180px;
+height:2200px;
+float:left;
+}
+
+
+#comments{
+width:250px;
+float:right;
+}
+
+#api-v{
+text-align: right;
+color:red;
+}
+
+</style>
+<!-- mbnet key -->
+<script id="api" src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyB1cf7qRhd2bawZprUNSituOLXDzbcqZ6E" type="text/javascript"></script>
+
+</head>
+
+<body onunload="GUnload()">
+
+<div id = "map"></div>
+
+<div id="comments">
+<b>Comments</b> and just comments. <span class="new">Now reversed. Newest first.</span><br/>
+Questions are answered on <a href="http://groups.google.com/group/Google-Maps-API">forum</a>, cannot answer here. Thanks to all of you for valuable feedback.
+<div class="js-kit-comments" backwards="yes"></div>
+</div>
+
+<div id = "maintable">
+
+<table>
+<col class="column1">
+<col class="column2">
+<tr>
+<td colspan="2">
+<h2>
+<img src="http://www.google.com/intl/en_ALL/mapfiles/marker.png"/>
+Google Maps API Examples and Test Pages</h2>
+</td></tr>
+<tr><td>
+Mostly cool. Some hot.
+</td>
+<td id="api-v">
+</td>
+</tr>
+<tr>
+<td colspan="2" style="background-color: #CCCCFF;">
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-3649938975494252";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel ="2676021345";
+google_color_border = "CCCCFF";
+google_color_bg = "CCCCFF";
+google_color_link = "0000CC";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td></tr>
+
+
+<tr><td>
+<a href = "http://apitricks.blogspot.com/">Blog</a></td><td> 
+A cluttered collection of experiments.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/googlepages/black_white.htm">Transparent map layers</a> </td><td> 
+Upper layer of Hybrid map type can be used by its own. Zoom display as a custom GControl also presented.<span class="new">New</span>
+</td></tr>
+<tr><td>
+<a href="http://esa.easypagez.com/v3boundsbox/">BoundsBox</a> <span class="new">v3</span></td><td> 
+v3 does not support polylines yet. A rectangle by coordinates can be drawn by a &lt;div&gt; overlay. <span class="new">New</span>
+</td></tr>
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/v3/geolocation.htm">Location by browser</a> <span class="new">v3</span></td><td> 
+FF3.5 and Chrome can provide client location. Other browsers with Google Gear installed make it as well. <span class="new">New</span>
+</td></tr>
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/googlepages/navlabel.htm">GNavLabelControl()</a></td><td> 
+A new GControl() block that shows reverse geocode data of the map viewport.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/collapsible.htm">Collapsible sidebar</a></td><td> 
+Sidebar of maps.google.com demystified and shamelessly copied.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/sortstack.htm">Drag & drop sortable list</a></td><td> 
+You don't have to load an enormous general purpose JavaScript library just for dragging and sorting. We can make drag sortable lists with GDraggableObject.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/categories.htm">Marker categories</a></td><td> 
+Sidebar with checkboxes that switch groups of markers on and off. This one hides the list from sidebar too.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/textmarkers.htm">Markers from a text file</a></td><td> 
+The popular concept rewritten. Now the source code can be read and understood. A two-way interactive sidebar is a must nowadays.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/csv2poly.htm">Polyline from a text file</a></td><td> 
+Markers from a csv text file have been used. Why not polylines or polygons too.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/batchgeo.htm">Batch geocoder</a></td><td> 
+Geocode your list of addresses in a single batch. Optional extension is added to each line of the list. Output in CSV again.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/reversegeo.htm">Reverse geocoder</a></td><td> 
+Place a marker on map and it snaps to nearest address which is shown. Save selected reverse geocode results as CSV.
+</td></tr>
+<tr><td>
+<a href="http://mapsapi.googlepages.com/poly2csv.htm">GPolyline editor</a></td><td> 
+This simple polyline editor does not output KML nor GeoJSON but plain text with comma separated coordinates, CSV.
+
+
+</td></tr>
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/showbounds.htm">showBounds()</a></td><td> 
+Autofitting markers to the map viewport is a popular routine. This method has padding parameters for not to have markers hiding under top border or under the zoom slider.
+
+</td></tr>
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/googlepages/glayers.htm">GLayers</a></td><td> 
+
+<code>map.addOverlay(new GLayer("com.panoramio.all"));</code> and you have geotagged photos on your map! Try all the available layers here. Updated by a feed from Google documentation.
+
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/sprite.htm">Sprites</a></td><td> 
+
+A fascinating technique to handle custom marker image sets.
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/bw_example.html">borderWatcher</a></td><td> 
+
+borderWatcher() method indicates markers outside viewport and approximately on which direction. CSS of map border is manipulated by JavaScript.
+
+
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/mymapsmarker.htm">Add markers MyMaps way</a></td><td> 
+
+This example does't do anything useful but it gives you an idea if you are building a service where users place markers on map. 
+
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/draggabledir.htm">Draggable GDirections</a></td><td> 
+
+Api does not give draggable driving directions like maps.google.com. You can make the markers draggable by creating new ones and sending the original ones to South Pole. An add-on code to original Google example. 
+</td></tr>
+
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/hidecontrols.htm">
+<!--<a href="http://koti.mbnet.fi/ojalesa/exam/hidecontrol.html">-->Hide controls</a></td>
+
+<td> Make your map cleaner by hiding the controls when they are not used.  .hideControls() method hides and showControls() brings them back.
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/geodesic.htm">Geodesic</a></td><td> 
+
+Polylines that follow great circle are now as simple as setting 'geodesic' option true. (v2.84+). Rightclick event is also tested here.
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/googlepages/earthquakes.htm">GeoRSS</a></td><td> 
+
+GeoRSS feeds can be read with Google AJAX Feed API. No server side scripting needed.
+<span class="new">Repaired</span>
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/googlepages/circle.htm">Circle</a></td><td> 
+A simple way to draw a circle with radius in kilometers.
+</td></tr>
+
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/polytime.htm">GPolygon clock</a></td><td> 
+
+A world clock as first experiment to prove that GPolygons can be used to implement dynamic presentation graphics. More to come about the subject.
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/ZMarker2.htm">Markers too close together</a></td><td> 
+
+
+
+A promising solution to the famous problem. Z-index switching is the idea. Now with marker color swap.
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/mixlatlng.htm">Lat/lng upside down</a></td><td> 
+
+
+Latitude / longitude confusion has happened to anyone. See where you go if you make that mistake.
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/sorry.htm">Auto zoomOut</a></td><td> 
+
+Detecting 'sorry' error tiles has been an unsolved problem. Here it is. Simple, may I say, clever. Sometimes it is too sensitive but it works.
+</td></tr>
+
+<tr><td>
+<a href="http://esa.ilmari.googlepages.com/highres.htm">Very deep zooms</a></td><td> 
+
+
+
+Zoom levels over 19 are possible without any special script. Some important areas are available at zoom level 21.
+</td></tr>
+
+
+<tr><td>
+
+<a href="http://esa.ilmari.googlepages.com/dragpolycont.htm">Filled polygon</a></td><td> 
+
+2.69 gave us GPolygon(). It is like GPolyline() but with fifth and sixth parameters which define the fill. See how it behaves when reshaped so that lines cross.
+</td></tr>
+
+<tr><td>
+
+<a href="http://koti.mbnet.fi/ojalesa/exam/nearest.html">Sorting by distance</a></td><td> 
+
+Markers are sorted by distance from a reference point. Only a certain (adjustable) amount of markers are shown.
+</td></tr>
+
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/csvread.html">Map contents from a text file</a></td><td> 
+
+GDownloadUrl() method is used to read marker locations and info bubble contents from a comma separated text file (csv).
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/ruler.html">Measuring ruler</a></td><td> 
+
+A handy distance measuring tape containing two draggable markers and a line between them. The dimension is displayed by two ELabels traveling with the markers. Also shown GDraggableObject which came with 2.59.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/autosize.html">Autosize map</a></td><td> 
+
+
+Map that autosizes when browser window is resized. A built in feature in api v2. Only IE needs a small fix.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/draggable.html">Draggable markers. Animated zoom.</a></td><td> 
+
+Draggable markers came with API v2.46. Animated zoom came with 2.58.
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/hole.html">See through hole</a></td><td> A movable hole in map shows satellite view.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/geotest.html">GClientGeocoder </a></td><td> Geocoding was built in API at v2.55. It is not very strict in typing rules. See the returned results and the speed here.
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/polylive.html">Polylive</a></td><td> Polyline reshaping in 
+real time. A study demonstrating the power of SVG. Can be accessed with IE but the polyline rendering is by slower 
+VML then.
+
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/editor_v2.html">Two way map editor</a></td><td> A map editor 
+
+that enables polyline and marker drawing by directly clicking on map. Points can be edited and tested. Any script 
+
+can be written and run.
+</td></tr>
+
+<tr><td>
+
+<a href="http://koti.mbnet.fi/ojalesa/exam/design_aid.html">Map design aid</a></td><td> Design your map layout. Adjust the size by scrollbars. Select the control buttons. Find center and zoom.
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/decimal.html">How many decimals</a></td><td> A study about coordinate precision.
+
+
+</td></tr>
+
+
+<tr><td>
+
+<a href="http://koti.mbnet.fi/ojalesa/exam/events_v2x.html">Event
+test tool.</a></td><td> These pages list all the GEvents you cause by
+hovering, clicking, dragging etc... Separate lists for map and
+marker. Now also GEventDomListener for map DOM. You can run your own scripts. Gives you
+lot of undocumented information.
+</td></tr>
+
+<tr><td>
+
+<a href="http://koti.mbnet.fi/ojalesa/">Finland City-info</a></td><td>Dual
+map concept is very user friendly even the panning 
+or zooming are not interconnected. Now equipped with geocoding. Also Google Ajax Search Api is
+applied.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/myriad.html">Myriad of markers</a></td><td> 'Mousemove' 
+creates a new marker at any moment that your computer processor has time to do it. Not only for fun but also for 
+study. GLog displays the amount of markers.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/mousemove.html">Coordinates of mouse pointer</a></td><td> 
+
+'Mousemove' event (v2.38+) returns mouse LatLng when mouse pointer moves on map. Even on open info window. A highly useful GEvent.
+</td></tr>
+
+<tr><td>
+
+<a href="http://koti.mbnet.fi/ojalesa/exam/drag.html">The first draggable markers</a></td><td> 
+'Mousemove' event was used to move a marker by dragging. Saved for historical reasons.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/preloadmap.html">Preloading
+hidden maps</a></td><td> Why? For instant swiching between different views. Plus
+making custom buttons a very simple way as a bonus for quick readers.
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/newdual.html">Overview
+map</a></td><td> was introduced in v2.41. Now API has dual map concept
+built in. This page was written immediately because I feel dual maps have 
+a smiling future.
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/svgtest.html">SVG test
+page</a></td><td>Polylines are PNG images that are formed in Googles
+server. The exeption is IE which draws the polylines using VML
+vector graphigs language. SVG support was introduced in v2.37. SVG
+is a more advanced vector graphigs markup language that is supported
+by new browsers FF1.5 and Opera9. Not for those few IE-users still out there.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/RSS/apimap.html">RSS in info balloon</a></td><td> If you can put 
+RSS in iframe you can put iframe in infowindow. I am using a PHP script that reads RSS but no Atom. Atom to RSS conversions are made via online services.
+
+</td></tr>
+
+<tr><td>
+
+<a href="http://koti.mbnet.fi/ojalesa/exam/anim_v2.html">Front/back
+order</a></td><td> of markers can be messed simply by moving them in
+south-north direction. (v1)
+
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/koe/dual.html">Classic dual
+map</a></td><td>From July 2005. First only the big map was draggable and the small map
+followed as slave. I presented a question on forum how to avoid infinite loops
+if I connect them bidirectionally. Mike Williams presented a solution immediately. Later a
+bookmarking system was added. Crosshairs are simply characters "o" and I do not
+see a reason for more complicated arrangements.
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/koe/opposite.html">Opposite side of the world</a></td><td>
+
+Four maps interconnected. Mathematics was simple because API accepts longitudes outside &plusmn;180 degrees (second turn).
+</td></tr>      
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/exam/manymarkers.html">Many
+markers</a></td><td>A simple page that enables you to test large
+numbers of markers on a map. There is an adjustable delay to test
+'raindrop' effect. Actually the JavaScript <code>timeout()</code> causes some
+delay even with zero setting!
+
+
+</td></tr>
+
+<tr><td>
+<a href="http://koti.mbnet.fi/ojalesa/tutor/karttasivu.html">Kartta
+nettisivuillesi</a></td><td>  A beginners tutorial for those who can read Finnish. Suomeksi.
+</td></tr>
+
+<tr><td>
+
+<a href="http://nuppineulat.blogspot.com/">Blog</a></td><td> Finnish. Suomeksi.
+</td></tr>
+<tr><td>
+
+Mail</td><td> gmapsapiATgmailDOTcom
+
+
+</td></tr>
+
+<tr>
+<td colspan="2" style="background-color: #CCCCFF;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3649938975494252";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel ="2676021345";
+google_color_border = "CCCCFF";
+google_color_bg = "CCCCFF";
+google_color_link = "0000CC";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td></tr>
+<tr>
+<td colspan="2">
+Thank You for stopping by. Click again.
+
+</td></tr>
+</table>
+</div>
+
+
+
+<script src="http://js-kit.com/comments.js"></script>
+
+
+<script>
+var map = new GMap2(document.getElementById("map"));
+map.setCenter(new GLatLng(0, 0), 4);
+function pan(){map.panDirection(0.5,0)};
+document.onscroll = pan;
+document.body.onscroll = pan;//IE
+// api version display
+document.getElementById("api-v").innerHTML = 'Current API version is 2.'+G_API_VERSION;
+var kml = new GGeoXml("https://dl.dropboxusercontent.com/u/49702/kml/LandSurveyorsUnitedGlobal%289-2012%29.kml");
+   map.addOverlay(kml)
+</script>
+
+</body>
+</html>

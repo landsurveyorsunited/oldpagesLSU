@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en"><head><script>(function(){var a=window,b="tick";var c=function(g){this.t={};this.tick=function(g,m,f){f=void 0!=f?f:(new Date).getTime();this.t[g]=[f,m]};this[b]("start",null,g)},d=new c;a.jstiming={Timer:c,load:d};if(a.performance&&a.performance.timing){var e=a.performance.timing,h=a.jstiming.load,i=e.navigationStart,j=e.responseStart;0<i&&j>=i&&(h[b]("_wtsrt",void 0,i),h[b]("wtsrt_","_wtsrt",j),h[b]("tbsd_","wtsrt_"))}
+try{var k=top!=self,l=a.location.href,n=null;a.chrome&&a.chrome.csi&&(n=Math.floor(a.chrome.csi().pageT),h&&0<i&&(h[b]("_tbnd",void 0,a.chrome.csi().startE),h[b]("tbnd_","_tbnd",i)));null==n&&a.gtbExternal&&(n=k?a.gtbExternal.frameT(l):a.gtbExternal.pageT());null==n&&a.external&&(k?n=a.external.frameT(l):(n=a.external.pageT,h&&0<i&&(h[b]("_tbnd",void 0,a.external.startE),h[b]("tbnd_","_tbnd",i))));n&&(a.jstiming.pt=n)}catch(p){};})();
+window["__csi"]={a:false,b:false,c:"enterprise",v:"default",g:null,d:false};if(window.jstiming){window.jstiming.beaconImageReferences_={};window.jstiming.reportCounter_=1;var getTick=function(b,c,a){var i=b.t[c],f=b.t.start;if(i&&(f||a))return i=b.t[c][0],f=void 0!=a?a:f[0],i-f},sendReport_=function(b,c,a){var i=a,a="";window.jstiming.pt&&(a+="&srt="+window.jstiming.pt,delete window.jstiming.pt);try{window.external&&window.external.tran?a+="&tran="+window.external.tran:window.gtbExternal&&window.gtbExternal.tran?a+="&tran="+window.gtbExternal.tran():window.chrome&&window.chrome.csi&&
+(a+="&tran="+window.chrome.csi().tran)}catch(f){}var d=window.chrome;if(d&&(d=d.loadTimes)){d().wasFetchedViaSpdy&&(a+="&p=s");if(d().wasNpnNegotiated){var a=a+"&npn=1",h=d().npnNegotiatedProtocol;h&&(a+="&npnv="+(encodeURIComponent||escape)(h))}d().wasAlternateProtocolAvailable&&(a+="&apa=1")}var g=b.t,m=g.start,d=[],h=[],e;for(e in g)if("start"!=e&&0!=e.indexOf("_")){var j=g[e][1];j?g[j]&&h.push(e+"."+getTick(b,e,g[j][0])):m&&d.push(e+"."+getTick(b,e))}delete g.start;if(c)for(var k in c)a+="&"+
+k+"="+c[k];(e=i)||(e="https:"==document.location.protocol?"https://csi.gstatic.com/csi":"http://csi.gstatic.com/csi");b=[e,"?v=3","&s="+(window.jstiming.sn||"opensocial-gadgets")+"&action=",b.name,h.length?"&it="+h.join(","):"","",a,"&rt=",d.join(",")].join("");if(!b)return"";e=new Image;var l=window.jstiming.reportCounter_++;window.jstiming.beaconImageReferences_[l]=e;e.onload=e.onerror=function(){window.jstiming&&delete window.jstiming.beaconImageReferences_[l]};e.src=b;e=null;return b};window.jstiming.report=
+function(b,c,a){if("prerender"==document.webkitVisibilityState){var i="webkitvisibilitychange",f=!1,d=function(){if(!f){c?c.prerender="1":c={prerender:"1"};var h;"prerender"==document.webkitVisibilityState?h=!1:(sendReport_(b,c,a),h=!0);h&&(f=!0,document.removeEventListener(i,d,!1))}};document.addEventListener(i,d,!1);return""}return sendReport_(b,c,a)}};var google=window.google||{},JSCompiler_temp_const$$1=google,JSCompiler_inline_result$$2,getParamValue$$inline_7=function(b){var c=mockHref$$inline_14?mockHref$$inline_14:document.location.href;return(b=c.match(RegExp("[?&]"+b+"=([^&#]+)")))?b[1]:null},tick$$inline_8=function(b){window.jstiming.load.tick(b);broadcast$$inline_13[b]=(new Date).getTime()},report$$inline_9=function(){if(!reported$$inline_16){var b=getParamValue$$inline_7("url")||"default",c=window.__csi||{},a=c.c||"default",i=c.v||"default",
+f=window.encodeURIComponent?encodeURIComponent:escape,f={gadget:f(b),container:f(a),view:f(i)},d=window.__dflags||{},h=[];c.g&&h.push(c.g);if(c.d)for(var g in d)"control"!==d[g]&&(f[g]=d[g],"true"===d[g]&&h.push(g));f.e=h.join(",");g=mockProtocol$$inline_15?mockProtocol$$inline_15:document.location.protocol;g=reportUris$$inline_12[g];window.jstiming.load.name=[a,"_",i].join("");window.jstiming.report(window.jstiming.load,f,g);if((a=window.gadgets)&&a.rpc&&c.b)broadcast$$inline_13.url=b,broadcast$$inline_13.id=
+getParamValue$$inline_7("mid"),a.rpc.call(null,"time_iframe",null,broadcast$$inline_13);reported$$inline_16=!0}},registerFunctionOnLoad$$inline_10=function(b){window.addEventListener?window.addEventListener("load",b,!1):window.attachEvent&&window.attachEvent("onload",b)},reportUris$$inline_12={"http:":"http://csi.gstatic.com/csi","https:":"https://gg.google.com/csi"},broadcast$$inline_13={},mockHref$$inline_14,mockProtocol$$inline_15,reported$$inline_16=!1,csi$$inline_17=window.__csi||{};
+if(csi$$inline_17.a){registerFunctionOnLoad$$inline_10(function(){tick$$inline_8("prt")});var func$$inline_66=function(){report$$inline_9()};window.onbeforeunload=func$$inline_66}else registerFunctionOnLoad$$inline_10(function(){tick$$inline_8("ol");tick$$inline_8("prt");report$$inline_9()});
+JSCompiler_inline_result$$2={reset_:function(){reported$$inline_16=!1},mockHref_:function(b){mockHref$$inline_14=b},mockProtocol_:function(b){mockProtocol$$inline_15=b},report_:report$$inline_9,tickPrtAndReport:function(){tick$$inline_8("prt");report$$inline_9()},tickDl:function(){tick$$inline_8("dl")}};JSCompiler_temp_const$$1.csi=JSCompiler_inline_result$$2;
+</script><script>
+/* mp-start */
+window['___jsl']=window['___jsl']||{};
+/* mp-end */
+</script><script>window['__isgadget']=true;</script><script src="//www-sites-opensocial.googleusercontent.com/gadgets/js/core.js?container=enterprise&amp;nocache=0&amp;debug=0&amp;c=0&amp;v=99d2adde813b852edea8833e2cb500c8&amp;sv=9&amp;jsload=0"></script><script>window['___jsl'] = window['___jsl'] || {};(window['___jsl']['ci'] = (window['___jsl']['ci'] || [])).push({"shindig.auth":{"authToken":"","trustedJson":""},"core.util":{"core":{}},"core.io":{"jsonProxyUrl":"//%host%/gadgets/makeRequest","proxyUrl":"//www-sites-opensocial.googleusercontent.com/gadgets/proxy/refresh=%refresh%&container=%container%%rewriteMime%&gadget=%gadget%/%rawurl%"}});gadgets.config.init({"shindig.auth":{"authToken":"","trustedJson":""},"core.util":{"core":{}},"core.io":{"jsonProxyUrl":"//%host%/gadgets/makeRequest","proxyUrl":"//www-sites-opensocial.googleusercontent.com/gadgets/proxy/refresh=%refresh%&container=%container%%rewriteMime%&gadget=%gadget%/%rawurl%"}});
+</script><script>gadgets.Prefs.setMessages_({});gadgets.Prefs.setDefaultPrefs_({"imagesix":"","imagetwo":"","imageone":"","imagefour":"","imagefive":"","imagethree":"","imageeight":"","imageseven":""});gadgets.io.preloaded_=[];</script><link href="https://sites.google.com/site/htmlboxtesting/ccs3imageaccordion/demo.css" rel="stylesheet" type="text/css"><link href="https://sites.google.com/site/htmlboxtesting/ccs3imageaccordion/style.css" rel="stylesheet" type="text/css"><link href="https://sites.google.com/site/htmlboxtesting/ccs3imageaccordion/css.css" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"> 
+        <title>Land Surveying Websites Designed with Google Sites</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+        <meta content="Image Accordion with CSS3" name="description">
+        <meta content="accordion, images, slideshow, css3, css-only, web development, component, tutorial" name="keywords">
+        <meta content="Ring Wing for Codrops" name="author">
+        
+        
+		
+		 
+		<!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+    </head><body dir="ltr"><script src="https://sites.google.com/site/htmlboxtesting/ccs3imageaccordion/modernizr.custom.79639.js" type="text/javascript"></script>
+        <div class="container">
+
+			<section class="main">
+			
+				<div class="ia-container">
+				
+					<figure>
+          
+						<img alt="Survey Earth in a Day" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/surveyearth.png">
+            
+						<input checked="checked" name="radio-set" type="radio">
+						<figcaption><a href="http://www.surveyearth.com" target="_blank"><span>VIEW SITE</span></a></figcaption>
+					
+						<figure>
+							<img alt="B and B Surveying of Houston, TX" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/bandbsurvey.png">
+							<input name="radio-set" type="radio">
+						<figcaption><a href="http://www.bandbsurveying.com/" target="_blank"><span>VIEW SITE</span></a></figcaption>
+							
+							<figure>
+								<img alt="St Croix Land Surveyors" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/stxsurvey.png">
+								<input name="radio-set" type="radio">
+						<figcaption><a href="http://www.stxsurvey.com/" target="_blank"><span>VIEW SITE</span></a></figcaption>
+								
+								<figure>
+									<img alt="Ty linghouse PLS" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/tolinghouse.png">
+									<input name="radio-set" type="radio">
+						<figcaption><a href="https://sites.google.com/site/olinghousesurvey/" target="_blank"><span>VIEW SITE</span></a></figcaption>
+									
+									<figure>
+										<img alt="Museum of Measurement and Time" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/momt.png">
+										<input name="radio-set" type="radio">
+						<figcaption><a href="http://my.museumofmeasurementandtime.org/" target="_blank"><span>VIEW SITE</span></a></figcaption>
+										
+										<figure>
+											<img alt="Free Surveying Company Template" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/company-surveying.png">
+											<input name="radio-set" type="radio">
+						<figcaption><a href="https://sites.google.com/site/landsurveyerresources/" target="_blank"><span>VIEW SITE</span></a></figcaption>
+								
+											<figure>
+												<img alt="All State Agents Directory" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/abb-directory.png">
+												<input name="radio-set" type="radio">
+						<figcaption><a href="https://sites.google.com/site/abbdirectory/home" target="_blank"><span>VIEW SITE</span></a></figcaption>											
+
+												<figure>
+													<img alt="Surveying Jobs Hub" src="https://sites.google.com/site/justinfarrowart/thought-stream/_draft_post-2/surveyingjobshub.png">
+													<input id="ia-selector-last" name="radio-set" type="radio">
+						<figcaption><a href="https://sites.google.com/site/landsurveyingjobs/" target="_blank"><span>VIEW SITE</span></a></figcaption>
+                          
+												</figure>
+												
+											</figure>
+								
+										</figure>	
+											
+									</figure>	
+										
+								</figure>
+									
+							</figure>
+							
+						</figure>
+						
+					</figure>
+					
+				</div><!-- ia-container -->
+				
+			</section>
+			
+        </div>
+    
+
+
+
+<script>gadgets.util.runOnLoadHandlers();</script><script>window.google.csi.tickDl();
+</script></body></html>

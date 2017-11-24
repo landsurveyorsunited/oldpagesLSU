@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>The centered box</title>
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Workarounds for CSS browser issues." />
+<style>
+body {
+margin: 0px;
+padding: 0px;
+font-family: arial,helvetica;
+color: #808080;
+text-align: center;
+background-color: white;
+}
+a {
+text-decoration: none;
+font-weight: bold;
+color: #000000;
+}
+a:visited {
+color: #eeeeee;
+}
+a:active {
+color: #000000;
+}
+a:hover {
+color: #990000;
+text-decoration: underline;
+}
+strong, b {
+font-weight: bold;
+}
+p {
+font-size: 12px;
+line-height: 22px;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+h1 {
+font-size: 24px;
+line-height: 44px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 0;
+}
+h2 {
+font-size: 18px;
+line-height: 40px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 0;
+}
+h3 {
+font-size: 16px;
+line-height: 22px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 0;
+}
+h4 {
+font-size: 14px;
+line-height: 26px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 0;
+}
+h5 {
+font-size: 12px;
+line-height: 22px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 0;
+}
+h6 {
+font-size: 10px;
+line-height: 18px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 0;
+}
+img {
+border: none;
+}
+.nowrap {
+white-space: nowrap;
+font-size: 10px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 0;
+}
+.tiny {
+font-size: 9px;
+line-height: 16px;
+margin-top: 15px;
+margin-bottom: 5px;
+}
+#content1 {
+border: 1px solid white;
+margin: 10px auto 20px;
+padding: 10px;
+background: transparent url(https://dl.dropbox.com/u/49702/images/toppane.png) no-repeat scroll 0% 50%;
+text-align: left;
+voice-family: inherit;
+width: 100%;
+}
+html > body #content1 {
+width: 100%;
+margin-top: 10px;
+padding-top: 10px;
+}
+pre {
+font-size: 12px;
+line-height: 22px;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+#content2 {
+border: 1px solid #666666;
+margin: 20px 1% 20px 2%;
+padding: 10px 2%;
+background: transparent none repeat scroll 0% 50%;
+float: left;
+voice-family: inherit;
+width: 60%;
+height: 350px;
+}
+html > body #content2 {
+width: 60%;
+}
+#content3 {
+margin: 20px 2% 20px 1%;
+padding: 10px 2%;
+background: transparent none repeat scroll 0% 50%;
+float: right;
+voice-family: inherit;
+width: 23%;
+color: #808080;
+}
+html > body #content3 {
+width: 23%;
+background-image: url(https://dl.dropbox.com/u/49702/images/MAINFILEsidebar.png);
+background-position: center top;
+height: 366px;
+background-repeat: no-repeat;
+color: #808080;
+}
+pre {
+font-size: 12px;
+line-height: 22px;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+<p><a href="css/01_centered_box.css"><br />
+</a></p>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+<div id="content1">
+<pre>Maurice Greene Interactive Designer|Audio Director|NY-Paris<br />Commisioned Works + Long Term Projects<br />New York 914 282 3731 &#8226; Paris 011 33 674 317 382<br /></pre>
+</div>
+<div id="content2">
+<p><img style="width: 575px; height: 350px;" alt="title and description of this image" title="whatever you want it to say when hover over image" src="https://dl.dropbox.com/u/49702/images/replace.png" /></p>
+<pre><br /></pre>
+</div>
+<div style="clear: none;" id="content3">
+<pre><br /></pre>
+<p>Snorks_______________
+A Concert for Creatures
+Conceptual Art &amp; Film Project
+by Loris Greaud (Pace Gallery) Starring David Lynch &amp;
+Charlotte Rampling
+</p>
+</div>
+<br />
+<div style="clear: both; height: 200px; padding-top: 20px; padding-bottom: 20px;" id="spacer">space between
+</div>
+</body></html>

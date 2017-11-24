@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>A Simple jQuery Fly-out Menu</title>
+
+<style>
+#container {
+  width: 1000px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+#nav {
+  margin: 50px 0 0;
+  width: 330px;
+  float: left;
+}
+#navList li {
+  margin: 0 0 10px;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+  position: relative;
+  float: left;
+}
+#navList a {
+  padding: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #333333;
+  display: block;
+  width: 250px;
+}
+#navList a:hover {
+  background-color: #0066ff;
+}
+#navList ul, #navList ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 280px;
+  background-color: #333333;
+}
+.listTab {
+  z-index: 100;
+}
+#navList .listTab li {
+  margin: 0;
+}
+#navList .listTab a, #navList .listTab a:hover {
+  width: 250px;
+}
+#navList .listTab a {
+  padding: 5px 5px 5px 10px;
+}
+#navList li:hover ul ul, #navList li:hover ul ul ul, #navList li:hover ul ul ul ul {
+  display: none;
+}
+#navList li:hover ul, #navList li li:hover ul, #navList li li li:hover ul, #navList li li li li:hover ul {
+  display: block;
+}
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js?ver=1.4.4"></script>
+<script type="text/javascript" src="scripts/flyout.js"></script>
+</head><body>
+<div id="container">
+<div id="nav">
+<ul id="navList">
+<li><a href="#">Home</a>
+<!-- This is the sub nav -->
+<ul class="listTab">
+<li><a href="#">About This Template Here</a></li>
+<li><a href="#">Flash</a></li>
+<li><a href="#">jQuery</a></li>
+</ul>
+</li>
+<li><a href="#">Blog</a>
+<!-- This is the sub nav -->
+<ul class="listTab">
+<li><a href="#">About This Template Here</a></li>
+<li><a href="#">Flash</a></li>
+<li><a href="#">jQuery</a>
+<ul class="listTab">
+<li><a href="#">About This Template Here</a></li>
+<li><a href="#">Flash</a></li>
+<li><a href="#">jQuery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">About</a>
+<!-- This is the sub nav -->
+<ul class="listTab">
+<li><a href="#">About This Template Here</a></li>
+<li><a href="#">Flash</a></li>
+<li><a href="#">jQuery</a></li>
+</ul>
+</li>
+<li><a href="#">Porfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</body></html>
