@@ -1,0 +1,45 @@
+<html><head>
+<script></script>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Map Test</title>
+
+<style>
+body,
+html{
+height: 100%;
+width: 100%; } /* If you don't do this, gremlins will eat your nose. */
+#gmap{
+height: 100%;
+left: 0;
+position: fixed !important; /* Acts in pretty much the same way as background-attachment: fixed for an image background. Has to be !important only if you're using the Google Maps API. */
+top: 0;
+width: 100%;
+z-index: 1; } /* Has to be at least one increment smaller in value than the container's z-index */
+#container{
+background: rgba(0, 0, 0, 0.8);
+border-radius: 20px;
+border: 3px solid #fff;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+margin: 0 auto;
+overflow: visible !important; /* Has to be !important only if you're using an on/off switch */
+padding: 40px;
+position: relative;
+top: 260px;
+width: 300px;
+z-index: 2; } /* Has to be at least one increment larger in value than the Google Maps iframe z-index */
+</style>
+</head><body>
+<!-- The regular embed code that Google Maps spews out, sans the line break and small tag; also, added "gmap" id as hook --><iframe id="gmap" src="https://maps.google.com/maps?q=5380+S+Boulevard+Dr+Homosassa,+FL+34448&amp;hl=en&amp;ll=28.783477,-82.619644&amp;spn=0.005501,0.006899&amp;sll=28.783476,-82.619646&amp;sspn=0.000000,0.000000&amp;view=map&amp;ftid=0x88e83eef1e81ccf5:0xbfcf0dd994fd0cca&amp;ftt=9&amp;geocode=FXQztwEdAlMT-w&amp;hnear=5380+S+Boulevard+Dr,+Homosassa,+Florida+34448&amp;t=h&amp;z=17&amp;iwloc=A&amp;t=h&amp;output=embed"></iframe><br>
+<small>View <a href="https://maps.google.com/maps?q=5380+S+Boulevard+Dr+Homosassa,+FL+34448&amp;hl=en&amp;ll=28.783477,-82.619644&amp;spn=0.005501,0.006899&amp;sll=28.783476,-82.619646&amp;sspn=0.000000,0.000000&amp;view=map&amp;ftid=0x88e83eef1e81ccf5:0xbfcf0dd994fd0cca&amp;ftt=9&amp;geocode=FXQztwEdAlMT-w&amp;hnear=5380+S+Boulevard+Dr,+Homosassa,+Florida+34448&amp;t=h&amp;z=17&amp;iwloc=A&amp;t=h&amp;source=embed" style="color: rgb(0, 0, 255); text-align: left;">Land
+Surveyors United Global (Sept 2012)</a> in a larger map</small>
+<div style="color: white;" id="container">
+<div class="copy">Welcome to Shelly's Seafood and Fish Market located in Old Homosassa Florida<a href="http://shellysseafood.com"><img
+ style="border: 0px solid ; width: 133px; height: 100px;"
+ alt="Shellys Seafood Homosassa Florida"
+ src="http://www.shellysseafood.com/_/rsrc/1325368264698/config/customLogo.gif?revision=11"></a></div>
+</div>
+<script src="https://dl.dropbox.com/u/49702/js/jquery-1.7.1.min.js"></script><script src="https://dl.dropbox.com/u/49702/js/jquery.pageslide.min.js"></script>
+
+<script>
+$(".open").pageslide();
+</script>
+</body></html>

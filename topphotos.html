@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Top Surveying Photos Pinboard</title>
+
+<link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/u/49702/css/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/u/49702/css/dcsns_wall.css" media="all" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://dl.dropbox.com/u/49702/js/jquery.plugins.js"></script>
+<script type="text/javascript" src="https://dl.dropbox.com/u/49702/js/jquery.site.js"></script>
+<script type="text/javascript" src="https://dl.dropbox.com/u/49702/js/jquery.social.stream.wall.1.1.js"></script>
+<script type="text/javascript" src="https://dl.dropbox.com/u/49702/js/jquery.social.stream.1.2.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+$('#social-stream').dcSocialStream({
+feeds: {
+rss: {
+id: 'http://landsurveyorsunited.com/leaderboards/photos/week?feed=yes&xn_auth=no&n=20&images=yes&imageMaxSize=240', out: 'intro,thumb,text', }
+},
+rotate: {
+delay: 0
+},
+control: false,
+filter: true,
+wall: true,
+max: 'limit',
+iconPath: 'https://dl.dropbox.com/u/49702/images/',
+imagePath: 'https://dl.dropbox.com/u/49702/images/'
+});
+});
+</script>
+<style>
+#wall {padding: 10px 0 0; min-height: 2000px;}
+body {
+background-image: url(https://dl.dropbox.com/u/49702/images/linen.png);
+background-color: #fafafa;
+margin-left: 5px;
+margin-top: 5px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+a:link {
+color: #555555;
+}
+a:visited {
+color: #555555;
+}
+a:hover {
+color: #555555;
+}
+a:active {
+color: #555555;
+}
+</style>
+</head>
+<body>
+<div id="social-stream"></div>
+</body></html>

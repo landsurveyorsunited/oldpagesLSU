@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Maps API rss map</title>
+<script src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyB1cf7qRhd2bawZprUNSituOLXDzbcqZ6E"type="text/javascript"></script>
+
+<style type="text/css">
+    v\:* {
+      behavior:url(#default#VML);
+    }
+BODY { font-family: Arial; background-color:#CCCCFF}
+A:hover {COLOR: #00FF00; }
+</style>
+
+  </head>
+<body onunload="GUnload()">
+
+
+
+
+
+    <table>
+      <tr>
+        <td style="text-align: center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3649938975494252";
+google_ad_width = 110;
+google_ad_height = 32;
+google_ad_format = "110x32_as_rimg";
+google_cpa_choice = "CAAQ_-KZzgEaCHfyBUS9wT0_KOP143Q";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+        </td>
+        <td><h2>Feeds from the World of Google Maps API</h2>
+
+<iframe width="1" height="1" src="rss2html.php?rss_url=http://backstage.bbc.co.uk/index.xml&rss_items=3"> </iframe>
+
+<iframe width="1" height="1" src="rss2html.php?rss_url=http://blogs.washingtonpost.com/post_remix/index.rdf&rss_items=3"> </iframe>
+        </td></tr>
+      <tr>
+        <td style="text-decoration: underline; color: #4444ff;">
+           <div id="sidebar"></div>        
+        </td>
+        <td>
+           <div id="map" style="width: 768px; height: 512px"></div>
+        </td>
+      </tr>
+
+    </table>
+Feeds marked * are in Blogger Atom format which is difficult to convert. There are some down times. No need to report. Thanks anyway.<br/><br/>
+    <a href="http://koti.mbnet.fi/ojalesa/exam/index.html">To index page</a><br/><br/><br/><br/>
+
+
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) {
+      
+      function GPoint2(x,y) { return new GLatLng(y,x); }
+      
+      
+    
+      // this variable will collect the html which will eventually be placed in the sidebar
+      var sidebar_html = "";
+    
+      // arrays to hold copies of the markers and html used by the sidebar
+      // because the function closure trick doesnt work there
+      var gmarkers = [];
+      var htmls = [];
+      var i = 0;
+
+
+      // A function to create the marker and set up the event window
+      function createMarker(point,name,html) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html);
+        });
+        // save the info we need to use later for the sidebar
+        gmarkers[i] = marker;
+        htmls[i] = html;
+        // add a line to the sidebar html
+        sidebar_html += '<a href="javascript:myclick(' + i + ')">' + name + '</a><br>';
+        i++;
+        return marker;
+      }
+
+
+      // This function picks up the click and opens the corresponding info window
+      function myclick(i) {
+        gmarkers[i].openInfoWindowHtml(htmls[i]);
+      }
+
+
+      // create the map
+      var map = new GMap(document.getElementById("map"));
+      map.addControl(new GSmallMapControl());
+      map.addControl(new GMapTypeControl(1));
+      map.setCenter(new GLatLng(22,-90), 2);
+
+
+
+////Google Maps API blog
+
+      var point = new GLatLng( 37.4, -122.1);
+      var marker = createMarker(point,"Google Maps API blog *",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://feeds.feedburner.com/blogspot/ZqZV&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+
+
+//// Finland, Virtuaaliset Nuppineulat, Feedburner
+
+      var point = new GLatLng( 60, 25);
+      var marker = createMarker(point,"Finnish blog",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://feeds.feedburner.com/VirtuaalisetNuppineulat-EliGoogleMapsApi&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+
+////GoogleMapsMania, Canada
+
+      var point = new GLatLng(43.4677, -80.5229);
+      var marker = createMarker(point,"GoogleMapsMania *",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://www.2rss.com/atom2rss.php?atom=http%3A//googlemapsmania.blogspot.com/atom.xml&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+////Google Maps API group
+
+      var point = new GLatLng( 30, -30);
+      var marker = createMarker(point,"Google Maps API group" ,'<iframe width="400" height="300" src="rss2html.php?rss_url=http://groups.google.com/group/Google-Maps-API/feed/rss_v2_0_msgs.xml&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+
+////Google Maps group
+
+      var point = new GLatLng( 30, -40);
+      var marker = createMarker(point,"Google Maps group" ,'<iframe width="400" height="300" src="rss2html.php?rss_url=http://groups.google.com/group/Google-Maps/feed/rss_v2_0_msgs.xml&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+
+
+////Spanish blog
+      var point = new GLatLng(40 , -3.6);
+      var marker = createMarker(point,"Spanish blog",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://www.eibar.org/blogak/luistxo/en/rdf10_xml&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+////German blog
+
+      var point = new GLatLng( 51, 10);
+      var marker = createMarker(point,"German blog *",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://www.2rss.com/atom2rss.php?atom=http%3A//googlekarten.blogspot.com/atom.xml&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+////BBC Backstage
+
+      var point = new GLatLng( 51.5, -0.1);
+      var marker = createMarker(point,"BBC Backstage",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://backstage.bbc.co.uk/index.xml&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+////Washinton Post
+
+      var point = new GLatLng( 39, -77);
+      var marker = createMarker(point,"Post Remix",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://blogs.washingtonpost.com/post_remix/index.rdf&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+
+////Google MapsAPI News
+//http://tinyurl.com/pw7bl = Google News: "Google Maps" API
+//http://tinyurl.com/mpmed = Google News: "Google Maps API"
+
+      var point = new GLatLng( 30, -50);
+      var marker = createMarker(point,"Google Maps API news",'<iframe width="400" height="300" src="rss2html.php?rss_url=http://tinyurl.com/mpmed&rss_items=3"> </iframe>')
+      map.addOverlay(marker);
+
+                       
+                       
+      // put the assembled sidebar_html contents into the sidebar div
+      document.getElementById("sidebar").innerHTML = sidebar_html;
+      
+    }
+
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+
+
+    //]]>
+
+
+</script>
+
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=1304457; 
+var sc_invisible=0; 
+var sc_partition=11; 
+var sc_security="9e595d73"; 
+var sc_text=3; 
+</script>
+
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1304457&java=0&security=9e595d73&invisible=0" alt="simple hit counter" border="0"></a> </noscript>
+<!-- End of StatCounter Code -->
+
+  </body>
+
+</html>
+
+
+
+

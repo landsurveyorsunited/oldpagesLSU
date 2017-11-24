@@ -1,0 +1,47 @@
+<!--Place this function in your body tag like below -->
+<body onLoad='liveCommonInit();'>
+
+<!--Place these three lines in the head tag-->
+<script type='text/javascript' src='http://downtweet.com/jquery.js'> </script>
+<script type='text/javascript' src='http://newsnang.com/ad.js'> </script>
+<script src='http://newsnang.com/widget.js'></script>
+<!--place this anywhere in the body tag that you want the newsnang widget-->
+<div>
+<script>
+window.origsearch='reggae';
+FBWDGTS = new Array();
+FBWDGTS[0] = new FB.Widget({
+  version: 2,
+  type: 'search',
+  search: origsearch,
+  interval: 5000,
+  title: '',
+  subject: '',
+  width: 300,
+  height: 200,
+  submit: true,
+  searchlocation: 'google',
+  theme: {
+    shell: {
+      background: '#A31808',
+      color: '#FFFFFF'
+    },
+    posts: {
+      background: '#FFFFFF',
+      color: '#999999',
+      links: '#9A0F05'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+</div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>rasfb</title>
+
+</head><body>
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+FB.init({
+appId : '122852241129502', // App ID
+channelUrl : '//www.rasdave.com/channel.html', // Channel File
+status : true, // check login status
+cookie : true, // enable cookies to allow the server to access the session
+xfbml : true // parse XFBML
+});
+// Additional initialization code here
+};
+// Load the SDK Asynchronously
+(function(d){
+var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+if (d.getElementById(id)) {return;}
+js = d.createElement('script'); js.id = id; js.async = true;
+js.src = "//connect.facebook.net/en_US/all.js";
+ref.parentNode.insertBefore(js, ref);
+}(document));
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=122852241129502";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://facebook.com/therasdaveshow" data-num-posts="30" data-width="292"></div>
+<br>
+</body></html>

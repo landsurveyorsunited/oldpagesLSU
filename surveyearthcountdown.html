@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>surveyearthcountdown</title>
+
+<script language="JavaScript">
+<!-- Begin
+var Temp2;
+var timerID = null;
+var timerRunning = false;
+function arry() {
+this.length = 12;
+this[0] = 31;
+this[1] = 28;
+this[2] = 31;
+this[3] = 30;
+this[4] = 31;
+this[5] = 30;
+this[6] = 31;
+this[7] = 31;
+this[8] = 30;
+this[9] = 31;
+this[10] = 30;
+this[11] = 31;
+}
+var date = new arry();
+function stopclock() {
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;
+}
+function startclock() {
+stopclock();
+showtime();
+}
+function showtime() {
+now = new Date();
+var CurMonth = now.getMonth();
+var CurDate = now.getDate();
+var CurYear = now.getFullYear();
+now = null;
+if (20 < CurDate) {
+CurDate -= date[CurMonth]; CurMonth++;
+}
+if (5 < CurMonth) {
+CurMonth -= 12; CurYear++;
+}
+var Yearleft = 2013 - CurYear;
+var Monthleft = 6 - CurMonth;
+var Dateleft = 21 - CurDate;
+document.dateform.a.value = Yearleft;
+document.dateform.b.value = Monthleft;
+document.dateform.c.value = Dateleft;
+timerID = setTimeout("showtime()",1000);
+timerRunning = true;
+}
+// End -->
+</script>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 204);" onload="startclock()" alink="#ee0000" link="#0000ee" vlink="#551a8b">
+<div style="text-align: center; background-color: rgb(204, 204, 204);">
+<form name="dateform">Only <input name="a" size="2" value="" type="text"> years, <input name="b" size="2" value="" type="text">
+months, and <input name="c" size="2" value="" type="text">
+days left until Survey Earth in a Day 2013</form>
+</div>
+</body></html>

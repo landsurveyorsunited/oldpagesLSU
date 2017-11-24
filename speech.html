@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html lang="en">
+        
+        <head>
+            <meta charset="utf-8">
+            <title>Dictation - Online Speech Recognition</title>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="author" content="Amit Agarwal">
+            <meta name="description" content="Dictation is a free online speech recognition software powered by Google Chrome. You can use Dictation to write emails and documents in the browser with your voice" />
+
+            <link rel="alternate" type="application/rss+xml" title="Land Surveyors United Blog" href="http://feeds.labnol.org/landsurveyorsunited" />
+            <link href="https://dl.dropbox.com/u/49702/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://dl.dropbox.com/u/49702/css/bootstrap-responsive.min.css" rel="stylesheet">
+            <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+            <link href="https://dl.dropbox.com/u/49702/css/bootstyle.css" rel="stylesheet">
+
+            <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+
+            <link rel="shortcut icon" href="http://landsurveyorsunited.com/favicon.ico">
+
+        </head>
+        
+        <body>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#info" data-toggle="modal"><i class="icon-home icon-white"></i> Speech Recognition</a>
+                                </li>
+                                <li><a href="/m?id=544331:MobilePage:97892">What You Missed</a></li>
+  <li><a href="/m?id=544331:MobilePage:98006">Geo Forum</a></li>
+  <li><a href="/m?id=544331:MobilePage:106585">Geo Groups</a></li>
+  <li><a href="/m?id=544331:MobilePage:99832">Members</a></li>
+  <li><a href="/m?id=544331:MobilePage:98031">Member Map</a></li>
+                                <li>
+                                    <a href="mailto:jfarrow@landsurveyorsunited.org?Subject=Dictation" target="_blank">Contact</a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="info" class="modal hide fade">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h1>Speech Recognition in the Browser</h1>
+                </div>
+                <div class="modal-body">
+                    <p>With Dictation, you can use the magic of speech recognition to write emails and documents in the browser without touching the keyboard.</p>
+                    <p>The app internally uses the built-in speech recognition engine of  Google Chrome to transform your voice into digital text. It works offline as well.</p>
+                    <hr>
+                    <h2>Speak in your Native Language</h2>
+                    <p>You don't have to speak in English as Chrome's engine can recognize quite a few languages including Arabic, Chines, Spanish, French, German, Italian, Malay, Indonesian and more. Dication will automatically determine your browser's default launguage and uses it for subsequent transcriptions. Indian languages aren't supported at this time.</p>
+                    <p>The x-webkit-speech attribute of HTML5 is only implemented for &lt;input&gt; (single-line) form fields so Dictation uses a workaround. It hides the <a href="http://www.labnol.org/software/add-speech-recognition-to-website/19989/">speech-enabled input</a> behind the microphone icon and appends the transcribed text to a regular DIV.</p>
+                    <p>The tool was created by <a href="http://www.labnol.org/about/" target="_blank">Amit Agarwal</a> on August 10, 2012.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="hero-unit">
+    <div class="speech-wrapper">
+      <input type="speech" id="speech" x-webkit-speech />
+    </div>
+                    <h2>Online Dictation</h2>
+                        <span class="help-block">
+                         Press Ctrl+Shift+.(period) or click the microphone icon and start talking. If the transcribed text is incorrect, just click the word to make a correction.
+                        </span>
+
+    <div class="answer"></div>
+
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <h2>Dictation Tips</h2>
+                        <p>You can narrate long sentences in one go and Chrome's built-in speech recognition will transcribe them right - see <a href="http://www.youtube.com/watch?v=6Ijsta6fBMM&hd=1" target="_blank">video demo</a>. Say "new line" to start a new paragraph or "delete everything" to completely erase your writing canvas.</p>
+                            <div class="addthis_toolbox addthis_default_style">
+                                <a tf:show-screen-name="false" class="addthis_button_twitter_follow_native"
+                                tf:screen_name="labnol" tf:show-count="false"></a>
+                                <a class="addthis_button_facebook_like" fb:like:layout="button_count"
+                                addthis:url="http://www.facebook.com/digital.inspiration"></a>
+                            </div>
+                    </div>
+                    <div class="span4">
+                        <h2>HTML5 Speech Recognition</h2>
+                        <p>Dictation uses the x-webkit-speech attribute of HTML5 that is only implemented in Google Chrome. You can click the microhone to enter dictation mode or just use the keyboard shortcut Ctrl+Shift+.(period).</p>
+                        <p>
+                            <a class="btn" href="http://www.labnol.org/software/add-speech-recognition-to-website/19989/">Speech Recognition with Chrome &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <h2>Practical Uses</h2>
+                        <p>Dictation converts your spoken voice into digital text. You can use it to write long forum posts, narrate stories or even compose a <a href="http://www.talltweets.com/">tall tweet</a>. Just remember to copy the transcribed text before exiting the site.</p>
+                        <p>
+                            <a class="btn" href="http://www.labnol.org/software/iphone-voice-recognition-software/11518/">Voice Recognition on Mobile &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <footer>
+                    <p>&copy; 2012 A Land Surveyors United Project by Justin Farrow, inspired by <a target="_blank" title="Digital Inspiration Blog"
+ href="http://www.labnol.org/software/add-speech-recognition-to-website/19989/">Amit
+Agarwal</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <div id=fb-root></div>
+    <script src="https://dl.dropbox.com/u/49702/js/jquery.min.js"></script>
+    <script src="https://dl.dropbox.com/u/49702/js/bootstrap.min.js"></script>
+    <script src="https://dl.dropbox.com/u/49702/js/functions.js"></script>
+        <script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=landsurveyorsunited"></script>
+
+  </body>
+</html>
